@@ -4,6 +4,7 @@ class Shape
   end
 end
 
+
 class Square < Shape
   def initialize(side)
     @side = side
