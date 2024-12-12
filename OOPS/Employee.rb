@@ -41,5 +41,6 @@ developer = Developer.new("hkb", 25678)
 manager.bonus(developer,9000)
 developer.increase_salary(2)
 manager.display_details
+
 developer.display_details
 
