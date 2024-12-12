@@ -10,6 +10,7 @@ class Car < Vehicle
   end  
 end  
 
+
 class Bike < Vehicle  
   def calculate_rent(days)  
     10 * days  
