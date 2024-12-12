@@ -24,6 +24,7 @@ class Rectangle < Shape
     @height = height  
   end  
 
+  
   def area  
     @width * @height  
   end  
