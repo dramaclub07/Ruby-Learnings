@@ -1,4 +1,5 @@
 #divisibility by 7
+
 numbers = gets.chomp.split.map(&:to_i) 
 numbers.each do |num|
   if num % 7 == 0
@@ -7,20 +8,3 @@ numbers.each do |num|
     puts num
   end
 end 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
