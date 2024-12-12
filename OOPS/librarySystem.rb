@@ -51,12 +51,12 @@ class PhysicalBook < Book
   end
 end
 
-books = [EBook.new("Ben 10","Aryan Negi","Action"), PhysicalBook.new("Hardships","Aalekh","Motivational")]
+books = [EBook.new("Ben 10","Priyanshu","Action"), PhysicalBook.new("Hardships","hkb","Motivational")]
 books.each do |book|
   book.show_details
 end
 
-ebook = EBook.new("Adventures of Dusty","Aryan","Adventure")
+ebook = EBook.new("Adventures of Dusty","Priyanshu","Adventure")
 phy_book = PhysicalBook.new("Noddy","Trent","Fantasy")
 ebook.download
 phy_book.checkout
