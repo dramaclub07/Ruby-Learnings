@@ -7,7 +7,7 @@ end
     class BankAccount
     private
     attr_accessor :balance
-
+#yo
     public
     def initialize(balance = 0)
         @balance = balance
@@ -40,6 +40,7 @@ end
     def display_balance
         puts "Current Balance:-> #{@balance}"
     end
+
 
     def balance_alert(balance)
         if balance < 50
