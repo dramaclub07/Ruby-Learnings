@@ -10,7 +10,7 @@ class Book
     @author = author
     @genre = genre
   end
-
+    
   def show_details
     puts "Book's Title: #{@title}"
     puts "Book's Author: #{@author}"
