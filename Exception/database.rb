@@ -14,7 +14,7 @@ def database_query
         end
         # Simulate a database connection failure
         if db == 1
-            raise DatabaseError.new("Database is not connected").tap do |e|
+            raise DatabaseError.new("Database is gtinot connected").tap do |e|
                 e.cause = ConnectionError.new("Connection timed out")
             end
         end

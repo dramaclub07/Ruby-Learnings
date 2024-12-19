@@ -1,4 +1,6 @@
-# Create RSpec tests for a ShoppingCart class that can add_item, remove_item, and calculate the total_price. Ensure the tests check if discounts are applied correctly when specific conditions are met.
+# Create RSpec tests for a ShoppingCart class that
+# can add_item, remove_item, and calculate the total_price.
+#Ensure the tests check if discounts are applied correctly when specific conditions are met.
 
 class Product
   attr_reader :name, :price, :quantity, :type

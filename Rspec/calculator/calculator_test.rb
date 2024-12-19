@@ -1,8 +1,8 @@
-require 'rspec'
+require 'rspec' #no need
 require_relative 'calculator.rb'
 
 RSpec.describe Calculator do
-  let(:calc) { Calculator.new }
+  let(:calc) { Calculator.new } #hooks used 
 
   describe "#add" do
     it "adds two numbers" do
@@ -18,7 +18,7 @@ RSpec.describe Calculator do
 
   describe "#multiply" do
     it "multiplies two numbers" do
-      expect(calc.multiply(2, 3)).to eq(6)
+      expect(calc.multiply(2, -3)).to eq(-6)
     end
   end
 
