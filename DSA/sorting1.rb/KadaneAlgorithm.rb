@@ -9,5 +9,6 @@ for i in 0...arr.length
   if temp_sum > global_sum
     global_sum = temp_sum
   end
+  
 end
 puts "Maximum sum of a subarray: #{global_sum}"

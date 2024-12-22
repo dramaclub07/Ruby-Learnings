@@ -17,6 +17,7 @@ print "Enter #{n} array elements: "
 arr = gets.chomp.split.map{|x| x.to_i}
 arr = selection_sort(arr,n) 
 puts arr.inspect
+.
 
 =begin
  - Best case: O(n^2) because no matter the initial ordering, the algorithm always performs n-1 comparisons for each element.

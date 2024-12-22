@@ -9,6 +9,7 @@ brr = gets.chomp.split.map{|x| x.to_i}
 first_point = num1-1
 second_point = num2-1
 res = []
+
 while first_point >=0 || second_point >= 0
   if first_point < 0
     res.unshift(brr[second_point])

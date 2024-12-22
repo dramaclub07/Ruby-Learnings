@@ -14,6 +14,7 @@ def DNF(arr,n)
   end
   return arr
 end
+
 print "Enter array with 0, 1 and 2: "
 arr = gets.chomp.split.map{|x| x.to_i}
 arr = DNF(arr,arr.length)

@@ -11,6 +11,7 @@ def insertion_sort(arr,n)
   return arr
 end
 
+
 print "Enter n: "
 n = gets.chomp.to_i
 print "Enter #{n} array elements: "

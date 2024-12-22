@@ -19,6 +19,7 @@ def quick_sort(arr,low=0,high=arr.length-1)
   end
 end
 
+
 print "Enter n: "
 n = gets.chomp.to_i
 print "Enter #{n} array elements: "
