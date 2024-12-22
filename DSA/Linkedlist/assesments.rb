@@ -21,6 +21,7 @@ Reverse a Linked List:
 Implement a function to reverse the nodes in a linked list.
 =end
 
+
 class Node
   attr_accessor :value, :next
 

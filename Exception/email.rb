@@ -6,6 +6,7 @@ end
 
 def validate_email (email)
   begin 
+    # Validate email using a gem like 'email-validator'
     regex ="^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$"
     unless email.match?(regex)
       raise EmailError.new("not a valid email")
