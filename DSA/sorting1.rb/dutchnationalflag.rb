@@ -1,21 +1,23 @@
-def DNF(arr,n)
-  low,mid,high = 0,0,n-1
+def sort_array(nums)
+  low = 0    # Pointer for 0
+  mid = 0    # Pointer for 1
+  high = nums.length - 1  # Pointer for 2
+
   while mid <= high
-    if arr[mid] == 0
-      arr[low],arr[mid] = arr[mid],arr[low]
+    if nums[mid] == 1
+      mid += 1
+    elsif nums[mid] == 2
+      nums[mid], nums[high] = nums[high], nums[mid]
+      high -= 1
+    else
+      nums[mid], nums[low] = nums[low], nums[mid]
       low += 1
       mid += 1
-    elsif arr[mid] == 1
-      mid += 1
-    elsif arr[mid] == 2
-      arr[mid],arr[high] = arr[high],arr[mid]
-      high -= 1
     end
   end
-  return arr
+  nums
 end
 
-print "Enter array with 0, 1 and 2: "
-arr = gets.chomp.split.map{|x| x.to_i}
-arr = DNF(arr,arr.length)
-puts arr.inspect
+nums = [2, 0, 2, 1, 1, 0]
+sorted_nums = sort_array(nums)
+puts "Sorted array: #{sorted_nums.inspect}"
