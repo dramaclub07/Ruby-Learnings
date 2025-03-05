@@ -10,7 +10,7 @@ class SimpleSet
 
   # Removes an element from the set  
   def remove(element)  
-    @elements.delete(element) if include?(element)  # Removes element if present  
+    @elements.delete(e lement) if include?(element)  # Removes element if present  
   end  
 
   # Check if an element exists  
