@@ -22,9 +22,6 @@ def unique(str)
     true
 end
 
-puts unique("abcde")
-puts unique("hellohello")
-puts unique("ASM")
-
-
-    
+puts unique("abcde").inspect
+puts unique("hellohello").inspect
+puts unique("ASM").inspect
