@@ -1777,3 +1777,80 @@ Migrating to CreateNotes (20250306041206)
   [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT /*application='NotesApp'*/[0m
   [1m[35m (2.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(171262924626392760) /*application='NotesApp'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NotesApp'*/[0m
+Started GET "/" for 127.0.0.1 at 2025-03-06 09:44:29 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NotesApp'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/railties-8.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/railties-8.0.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.2ms | GC: 0.0ms)
+Completed 200 OK in 5720ms (Views: 7.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/index" for 127.0.0.1 at 2025-03-06 09:45:00 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-03-06 09:45:03 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/notes" for 127.0.0.1 at 2025-03-06 09:45:09 +0530
+Processing by NotesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/index.html.erb within layouts/application
+  [1m[36mNote Load (227.8ms)[0m  [1m[34mSELECT "notes".* FROM "notes" /*action='index',application='NotesApp',controller='notes'*/[0m
+  ↳ app/views/notes/index.html.erb:8
+  Rendered notes/index.html.erb within layouts/application (Duration: 235.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 712.0ms | GC: 0.2ms)
+Completed 200 OK in 4290ms (Views: 522.9ms | ActiveRecord: 249.2ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/assets/controllers/index-ee64e1f1.js" for 127.0.0.1 at 2025-03-06 09:45:15 +0530
+Started GET "/notes/new" for 127.0.0.1 at 2025-03-06 09:45:26 +0530
+Processing by NotesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering notes/new.html.erb within layouts/application
+  Rendered notes/_form.html.erb (Duration: 332.8ms | GC: 0.0ms)
+  Rendered notes/new.html.erb within layouts/application (Duration: 337.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 339.8ms | GC: 0.0ms)
+Completed 200 OK in 3058ms (Views: 341.5ms | ActiveRecord: 27.6ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/notes" for 127.0.0.1 at 2025-03-06 09:45:39 +0530
+Processing by NotesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "note"=>{"title"=>"hello 101", "content"=>"no"}, "commit"=>"Create Note"}
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN /*action='create',application='NotesApp',controller='notes'*/[0m
+  ↳ app/controllers/notes_controller.rb:27:in `block in create'
+  [1m[36mNote Create (14.1ms)[0m  [1m[32mINSERT INTO "notes" ("title", "content", "created_at", "updated_at") VALUES ('hello 101', 'no', '2025-03-06 04:15:42.896277', '2025-03-06 04:15:42.896277') RETURNING "id" /*action='create',application='NotesApp',controller='notes'*/[0m
+  ↳ app/controllers/notes_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT /*action='create',application='NotesApp',controller='notes'*/[0m
+  ↳ app/controllers/notes_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/notes/1
+Completed 302 Found in 3075ms (ActiveRecord: 18.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/notes/1" for 127.0.0.1 at 2025-03-06 09:45:42 +0530
+Processing by NotesController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.9ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = 1 LIMIT 1 /*action='show',application='NotesApp',controller='notes'*/[0m
+  ↳ app/controllers/notes_controller.rb:63:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/show.html.erb within layouts/application
+  Rendered notes/_note.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered notes/show.html.erb within layouts/application (Duration: 34.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 36.4ms | GC: 0.0ms)
+Completed 200 OK in 3293ms (Views: 37.6ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/notes/1/edit" for 127.0.0.1 at 2025-03-06 09:45:49 +0530
+Processing by NotesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."id" = 1 LIMIT 1 /*action='edit',application='NotesApp',controller='notes'*/[0m
+  ↳ app/controllers/notes_controller.rb:63:in `set_note'
+  Rendering layout layouts/application.html.erb
+  Rendering notes/edit.html.erb within layouts/application
+  Rendered notes/_form.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered notes/edit.html.erb within layouts/application (Duration: 3.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | GC: 0.0ms)
+Completed 200 OK in 1857ms (Views: 5.7ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+

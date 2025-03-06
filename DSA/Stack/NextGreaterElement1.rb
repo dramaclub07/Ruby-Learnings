@@ -11,3 +11,4 @@ def next_greater_element(nums1, nums2)
 
   nums1.map { |num| map[num] || -1 }
 end
+ 

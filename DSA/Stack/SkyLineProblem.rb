@@ -7,7 +7,7 @@ def get_skyline(buildings)
   heap = [0]
   prev = 0
 
-  events.each do |x, h, r|
+  events.each do |x, h, r| 
     if h < 0
       heap.push(-h)
     else
